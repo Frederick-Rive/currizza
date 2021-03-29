@@ -1,0 +1,285 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background-color: #EADDB2;
+}
+
+/*
+primarycolour: #F3D362
+secondarycolour: #FAA669
+backgroundcolor: #EADDB2
+highlightcolour: #D95252
+*/
+a{
+  color: inherit;
+}
+
+h1{
+  padding: 20px 20% 0% 20%;
+  font-size: 300%;
+  text-decoration: inherit;
+}
+
+h2{
+  padding: 0% 19% 0% 19%;
+  font-size: 150%;
+  margin: 1% 0% 1% 0%;
+  float: left;
+}
+
+h3{
+  text-align: center;
+  font-size: 175%;
+  margin: 5%;
+}
+
+h4{
+  margin: 0.5% 0.5% 0% 5%;
+  font-size: 150%;
+  display: inline;
+  float: left;
+}
+
+p{
+  margin: 5% 10% 5% 10%;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  background-size: contain;
+}
+
+nav{
+  border-style: solid;
+  border-width: 0 0 0 1px;
+  height: 48px;
+  font-size: 125%;
+  padding-top: 1.5%;
+  width: 120px;
+  text-align: center;
+  float: right;
+  cursor: inherit;
+}
+
+main{
+  padding: 2%;
+}
+
+aside{
+  width: 15%;
+  padding: 0.1%;
+  height: 1000px
+}
+
+footer{
+
+}
+
+article{
+  background-color: #F3D362;
+  box-shadow: 0px 5px 5px #B0A686;
+}
+
+/*its quite simply the most efficent way*/
+
+.col1{
+  float: left;
+  width: 50%;
+}
+
+.col2{
+  float: left;
+  width: 25%;
+}
+
+.col3{
+  float: left;
+  width: 75%;
+}
+
+.col4{
+  float: left;
+  width: 60%;
+}
+
+.col5{
+  float: left;
+  width: 40%;
+}
+
+.col6{
+  float: left;
+  width: 47.5%;
+}
+
+.col7{
+  float: left;
+  width: 100%;
+}
+
+.col8{
+  float: left;
+  width: 20%;
+}
+
+.nav1{
+  background-color: inherit;
+}
+
+.nav2{
+  background-color: inherit;
+  margin-right: 5%;
+  border-width: 0 1px 0 1px;
+}
+
+.mainbanner{
+  background-color: #F3D362;
+  height: 100px;
+  cursor: pointer;
+  text-decoration: inherit;
+  background: rgb(243,211,98);
+  background: linear-gradient(90deg, rgba(243,211,98,1) 65%, rgba(0,0,0,0) 95%);
+  z-index: 1;
+}
+
+.mainbanner :: after{
+  clear: both;
+  display: table;
+  content: "";
+}
+
+.mainheaderimage{
+  float: right;
+  max-width: 50%;
+  height: 100px;
+  position: absolute;
+  left: 60.5%;
+  top: 0px;
+  z-index: -1;
+  height = 100px;
+}
+
+.navbanner{
+  background-color: #FAA669;
+  border-style: solid;
+  border-width: thin;
+  padding: 0 5% 0 2%;
+  height: 50px;
+  box-shadow: 0px 5px 5px #B0A686;
+}
+
+.navbanner :: after{
+  clear: both;
+  display: table;
+  content: "";
+}
+
+.footerbanner{
+  background-color: #FAA669;
+  border-style: solid;
+  border-width: thin;
+  padding: 0 5% 0 2%;
+  margin-top: 1000px;
+  height: 50px;
+  box-shadow: 0px 5px 5px #B0A686;
+}
+
+.article1{
+  margin-top: 5%;
+  height: 250px;
+}
+
+.article2{
+  margin-top: 2%;
+  height: 220px;
+}
+
+.article1img{
+  background-size: cover;
+  height: 250px;
+  float: right;
+}
+
+.article2img{
+  background-size: cover;
+  height: 220px;
+  float: right;
+}
+
+.colgap{
+  float: left;
+  margin: 2.5%;
+}
+
+.rowgap{
+  margin: 2.5%;
+}
+
+.map{
+  height: 600px;
+  background-color: lightgrey;
+}
+
+.menuheader{
+  margin: 2%;
+}
+
+/*font awesome icons*/
+.fa {
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 0 0 1%;
+  padding: 7px;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #DD2A7B;
+  color: black;
+}
+
+@media only screen and (max-width: 1100px) {
+  body {
+    background-color: lightblue;
+  }
+
+  nav{
+    float: right;
+    width: 25%;
+    border: solid;
+    border-width: thin;
+  }
+
+  .col1{
+    width: 100%;
+    float: none;
+  }
+
+  .nav2{
+    margin-right: 0%;
+  }
+
+  .mainbanner{
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0% rgba(243,211,98,1) 65%, rgba(0,0,0,0) 90%);
+
+  }
+}
