@@ -138,6 +138,14 @@ article{
   border-width: 0 1px 0 1px;
 }
 
+.menunav{
+  margin: 4% 0% 2% 0%;
+  background-color:#F3D362;
+  width: 20%;
+  border-width: 1px;
+  padding-top: 1%;
+}
+
 .mainbanner{
   background-color: #F3D362;
   height: 100px;
@@ -198,6 +206,8 @@ article{
 .article2{
   margin-top: 2%;
   height: 220px;
+  border-style: solid;
+  border-width: thin;
 }
 
 .article1img{
@@ -228,6 +238,26 @@ article{
 
 .menuheader{
   margin: 2%;
+}
+
+.customise{
+  height: 40px;
+  background-color: #FAA669;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 25px;
+}
+
+.order{
+  height: 40px;
+  background-color: #D95252;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 25px;
 }
 
 /*font awesome icons*/
