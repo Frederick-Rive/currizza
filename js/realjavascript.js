@@ -41,10 +41,11 @@ document.addEventListener("DOMContentLoaded", function(event){
   shop.style.display = "none";
   checkOut.style.display = "none";
 
-  var home = new NavPage(signNav, account);
+  //declare the price var
+  var price = 0.00;
 
   //Setup the navigation array and the order dictionary
-  const navigation = [new NavPage(homeNav, homePage), new NavPage(signNav, account), new NavPage(logNav, account), new NavPage(bioNav, bio), new NavPage(shopNav, shop)];
+  const mainNavigation = [new NavPage(homeNav, homePage), new NavPage(signNav, account), new NavPage(logNav, account), new NavPage(bioNav, bio), new NavPage(shopNav, shop)];
   const orderDict = {
     "bollywoodBomb9": 12.99,
     "bollywoodBomb12": 18.99,
@@ -105,37 +106,178 @@ document.addEventListener("DOMContentLoaded", function(event){
 
   //Get the navigation working
   homeNav.addEventListener('click', function(){
-    navigate(homeNav);
+    navigate(homeNav, mainNavigation);
+    document.getElementsByTagName("footer")[0].style.marginTop = "1000px";
   });
   signNav.addEventListener('click', function(){
-    navigate(signNav);
+    navigate(signNav, mainNavigation);
+    document.getElementsByTagName("footer")[0].style.marginTop = "1000px";
   });
   logNav.addEventListener('click', function(){
-    navigate(logNav);
+    navigate(logNav, mainNavigation);
+    document.getElementsByTagName("footer")[0].style.marginTop = "1000px";
   });
   bioNav.addEventListener('click', function(){
-    navigate(bioNav);
+    navigate(bioNav, mainNavigation);
+    document.getElementsByTagName("footer")[0].style.marginTop = "1000px";
   });
   shopNav.addEventListener('click', function(){
-    navigate(shopNav);
+    navigate(shopNav, mainNavigation);
+    document.getElementsByTagName("footer")[0].style.marginTop = "1500px";
   });
 
   //navigation function. to navigate
-  function navigate(nav){
-    for (var i = 0; i < navigation.length; i++) {
-      if (nav == navigation[i].nav) {
-        navigation[i].page.style.display = "block";
+  function navigate(nav, navArray){
+    for (var i = 0; i < navArray.length; i++) {
+      if (nav == navArray[i].nav) {
+        navArray[i].page.style.display = "block";
         if (nav != document.getElementById('homenav')){
-          navigation[i].nav.style.backgroundColor = "#FAA669";
+          navArray[i].nav.style.backgroundColor = "#FAA669";
       }
-        navigation[i].nav.style.cursor = "default";
+        navArray[i].nav.style.cursor = "default";
       } else {
-        navigation[i].page.style.display = "none";
-        if (navigation[i].nav != document.getElementById('homenav')){
-          navigation[i].nav.style.backgroundColor = navigation[i].color;
+        if (!(navArray[i].page == account && (nav == signNav || nav == logNav)))
+        {
+          navArray[i].page.style.display = "none";
         }
-        navigation[i].nav.style.cursor = "pointer";
+        if (navArray[i].nav != document.getElementById('homenav')){
+          navArray[i].nav.style.backgroundColor = navArray[i].color;
+        }
+        navArray[i].nav.style.cursor = "pointer";
       }
+    }
+  }
+
+  function AddCustomPrice (input, customBox)
+  {
+    var output = 0.00;
+    if (document.getElementById("apricotsauce").checked)
+    {
+      output += document.getElementById("apricotsauce").value;
+    }
+    if (document.getElementById("buttersauce").checked)
+    {
+      output += document.getElementById("buttersauce").value;
+    }
+    if (document.getElementById("cheesesauce").checked)
+    {
+      output += document.getElementById("cheesesauce").value;
+    }
+    if (document.getElementById("coriander").checked)
+    {
+      output += document.getElementById("coriander").value;
+    }
+    if (document.getElementById("garlicaioli").checked)
+    {
+      output += document.getElementById("garlicaioli").value;
+    }
+    if (document.getElementById("hotchillisauce").checked)
+    {
+      output += document.getElementById("hotchillisauce").value;
+    }
+    if (document.getElementById("indianhotchilli").checked)
+    {
+      output += document.getElementById("indianhotchilli").value;
+    }
+    if (document.getElementById("lamb").checked)
+    {
+      output += document.getElementById("lamb").value;
+    }
+    if (document.getElementById("mozzarella").checked)
+    {
+      output += document.getElementById("mozzarella").value;
+    }
+    if (document.getElementById("onion").checked)
+    {
+      output += document.getElementById("onion").value;
+    }
+    if (document.getElementById("pepperoni").checked)
+    {
+      output += document.getElementById("pepperoni").value;
+    }
+    if (document.getElementById("pineapple").checked)
+    {
+      output += document.getElementById("pineapple").value;
+    }
+    if (document.getElementById("seasonedchicken").checked)
+    {
+      output += document.getElementById("seasonedchicken").value;
+    }
+    if (document.getElementById("smokeybbq").checked)
+    {
+      output += document.getElementById("smokeybbq").value;
+    }
+    if (document.getElementById("sweetchili").checked)
+    {
+      output += document.getElementById("sweetchili").value;
+    }
+    if (document.getElementById("tikkamasalasauce").checked)
+    {
+      output += document.getElementById("tikkamasalasauce").value;
+    }
+    if (document.getElementById("beef").checked)
+    {
+      output += document.getElementById("beef").value;
+    }
+    if (document.getElementById("capsicum").checked)
+    {
+      output += document.getElementById("chorizo").value;
+    }
+    if (document.getElementById("chorizo").checked)
+    {
+      output += document.getElementById("creamybbq").value;
+    }
+    if (document.getElementById("creamybbq").checked)
+    {
+      output += document.getElementById("ham").value;
+    }
+    if (document.getElementById("ham").checked)
+    {
+      output += document.getElementById("hotperiperisauce").value;
+    }
+    if (document.getElementById("hotperiperisauce").checked)
+    {
+      output += document.getElementById("jalapenos").value;
+    }
+    if (document.getElementById("jalapenos").checked)
+    {
+      output += document.getElementById("mangosauce").value;
+    }
+    if (document.getElementById("mangosauce").checked)
+    {
+      output += document.getElementById("olives").value;
+    }
+    if (document.getElementById("olives").checked)
+    {
+      output += document.getElementById("paneer").value;
+    }
+    if (document.getElementById("onion").checked)
+    {
+      output += document.getElementById("onion").value;
+    }
+    if (document.getElementById("pepperoni").checked)
+    {
+      output += document.getElementById("pepperoni").value;
+    }
+    if (document.getElementById("pineapple").checked)
+    {
+      output += document.getElementById("pineapple").value;
+    }
+    if (document.getElementById("seasonedchicken").checked)
+    {
+      output += document.getElementById("seasonedchicken").value;
+    }
+    if (document.getElementById("smokeybbq").checked)
+    {
+      output += document.getElementById("smokeybbq").value;
+    }
+    if (document.getElementById("sweetchili").checked)
+    {
+      output += document.getElementById("sweetchili").value;
+    }
+    if (document.getElementById("tikkamasalasauce").checked)
+    {
+      output += document.getElementById("tikkamasalasauce").value;
     }
   }
 });
