@@ -1,0 +1,77 @@
+css
+footer{
+  position: absolute;
+  top: 950px;
+  width: 100%;
+}
+
+.biotext{
+  font-size: 120%;
+  border-left-style: solid;
+  padding: 2%;
+  margin: 4% 8%;
+  z-index: 2;
+}
+
+#biobackground{
+  width: 100%;
+  height: 800px;
+  background-image: linear-gradient(90deg, #EADDB2, 85%, rgba(0,0,0,0) 95%);
+  position: relative;
+  z-index: -1;
+}
+
+#bioimg{
+  position: absolute;
+  z-index: -2;
+  right: 0;
+  top: 150px;
+  height: 800px;
+  max-width: 100%;
+}
+
+#biotext{
+  position: absolute;
+  top: 150px;
+  left: 0;
+}
+
+html
+<div id="bio">
+      <div id="biobackground"></div>
+      <div class="col4" id="biotext">
+        <p class="biotext">We bring to you an amazing world of Pizzas with a wide range of Curry Pizza, sauces and dips. Our Curry Pizzas, delicious snacks like Garlic bread, Tandoori chicken bites, curly Fries, desserts like Passionfruit Cheesecake, Brownie, Tiramisu and refreshing complimenting drinks are made with fresh ingredients. We offer professional quick service with a smile. Whether you love non-vegetarian pizza or vegetarian one, we have a lot of variety to serve you.</p>
+
+        <p class="biotext">We are the first Curry Pizza shop in Wellington and we are located Opposite to famous Cricket ground Basin Reserve 43 Rugby street, Mt. Cook, Wellington. We are proud and happy to serve really tasty Curry Pizzas that makes our customers satisfied and smiling.</p>
+
+        <p class="biotext">Cooking has always been my passion and that is what brought me to Wellington in the year 2009 to study Hospitality Management. I had a deep urge to do something different when it comes to cooking. I partnered with a well known Indian restaurant in 2014 and took it to a new height during my association period of four years. I introduced fusion curries and amazing cocktails to the menu which was highly appreciated by the customers.</p>
+
+        <p class="biotext">One day an idea raced through my mind and Currizza, the Pizza Shop, was born. After a lot of research, experiments our team came up with amazing Curry Pizza variations. Currizza was established with the belief that 'Pizza' and 'Happiness' must go hand in hand making your experience special. We understand our customers and we know how to keep them happy.</p>
+      </div>
+
+      <img src="images\biobackground.png" id="bioimg" alt="storefront"/>
+    </div>
+    
+  
+  javascript
+  //Get the navigation working
+  homeNav.addEventListener('click', function(){
+    navigate(homeNav, mainNavigation);
+    document.getElementsByTagName("footer")[0].style.top = "1150px";
+  });
+  signNav.addEventListener('click', function(){
+    navigate(signNav, mainNavigation);
+    document.getElementsByTagName("footer")[0].style.top = "1150px";
+  });
+  logNav.addEventListener('click', function(){
+    navigate(logNav, mainNavigation);
+    document.getElementsByTagName("footer")[0].style.top = "1150px";
+  });
+  bioNav.addEventListener('click', function(){
+    navigate(bioNav, mainNavigation);
+    document.getElementsByTagName("footer")[0].style.top = "950px";
+  });
+  shopNav.addEventListener('click', function(){
+    navigate(shopNav, mainNavigation);
+    document.getElementsByTagName("footer")[0].style.top = "1420px";
+  });
