@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function(event){
   bioNav.style.cursor = "pointer";
   shopNav.style.cursor = "pointer";
   monthlySpecial.style.cursor = "pointer";
-  homePage.style.display = "block";
+  homePage.style.display = "none";
   account.style.display = "none";
-  bio.style.display = "none";
+  bio.style.display = "block";
   shop.style.display = "none";
   checkOut.style.display = "none";
 
@@ -107,23 +107,23 @@ document.addEventListener("DOMContentLoaded", function(event){
   //Get the navigation working
   homeNav.addEventListener('click', function(){
     navigate(homeNav, mainNavigation);
-    document.getElementsByTagName("footer")[0].style.marginTop = "1000px";
+    document.getElementsByTagName("footer")[0].style.top = "1150px";
   });
   signNav.addEventListener('click', function(){
     navigate(signNav, mainNavigation);
-    document.getElementsByTagName("footer")[0].style.marginTop = "1000px";
+    document.getElementsByTagName("footer")[0].style.top = "1150px";
   });
   logNav.addEventListener('click', function(){
     navigate(logNav, mainNavigation);
-    document.getElementsByTagName("footer")[0].style.marginTop = "1000px";
+    document.getElementsByTagName("footer")[0].style.top = "1150px";
   });
   bioNav.addEventListener('click', function(){
     navigate(bioNav, mainNavigation);
-    document.getElementsByTagName("footer")[0].style.marginTop = "1000px";
+    document.getElementsByTagName("footer")[0].style.top = "950px";
   });
   shopNav.addEventListener('click', function(){
     navigate(shopNav, mainNavigation);
-    document.getElementsByTagName("footer")[0].style.marginTop = "1500px";
+    document.getElementsByTagName("footer")[0].style.top = "1420px";
   });
 
   //navigation function. to navigate
